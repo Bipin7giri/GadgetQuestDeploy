@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Storage = exports.Price = exports.ProductMetadata = exports.AllPhone = exports.SubCategory = exports.Category = exports.UserCredential = exports.User = exports.Role = void 0;
+const role_entity_1 = require("../roles/entities/role.entity");
+Object.defineProperty(exports, "Role", { enumerable: true, get: function () { return role_entity_1.Role; } });
+const UserCredential_entities_1 = require("../users/entities/UserCredential.entities");
+Object.defineProperty(exports, "UserCredential", { enumerable: true, get: function () { return UserCredential_entities_1.UserCredential; } });
+const user_entity_1 = require("../users/entities/user.entity");
+Object.defineProperty(exports, "User", { enumerable: true, get: function () { return user_entity_1.User; } });
+const category_entity_1 = require("../category/entities/category.entity");
+Object.defineProperty(exports, "Category", { enumerable: true, get: function () { return category_entity_1.Category; } });
+const subcategory_entity_1 = require("../subcategory/entities/subcategory.entity");
+Object.defineProperty(exports, "SubCategory", { enumerable: true, get: function () { return subcategory_entity_1.SubCategory; } });
+const all_phone_entity_1 = require("../all-phones/entities/all-phone.entity");
+Object.defineProperty(exports, "AllPhone", { enumerable: true, get: function () { return all_phone_entity_1.AllPhone; } });
+const productMetaData_1 = require("../all-phones/entities/productMetaData");
+Object.defineProperty(exports, "ProductMetadata", { enumerable: true, get: function () { return productMetaData_1.ProductMetadata; } });
+const price_entity_1 = require("../all-phones/entities/price.entity");
+Object.defineProperty(exports, "Price", { enumerable: true, get: function () { return price_entity_1.Price; } });
+const storage_entity_1 = require("../all-phones/entities/storage.entity");
+Object.defineProperty(exports, "Storage", { enumerable: true, get: function () { return storage_entity_1.Storage; } });
+const entities = [role_entity_1.Role, user_entity_1.User, UserCredential_entities_1.UserCredential, category_entity_1.Category, subcategory_entity_1.SubCategory, all_phone_entity_1.AllPhone, productMetaData_1.ProductMetadata, price_entity_1.Price, storage_entity_1.Storage];
+exports.default = entities;
+//# sourceMappingURL=index.js.map
