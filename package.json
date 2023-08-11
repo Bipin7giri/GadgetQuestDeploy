@@ -85,8 +85,7 @@
       "testEnvironment": "node"
     },
     "engines": {
-      "node": ">=16.14.0 <=18.x.x",
-      "npm": ">=6.0.0"
+      "node": ">=16 <18"
     }
   }
   
