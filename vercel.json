@@ -7,7 +7,7 @@
     "routes":[
         {
             "src":"/api/(.*)",
-            "dest":"/"
+            "dest":"/bestphone"
         }
     ]
 }
