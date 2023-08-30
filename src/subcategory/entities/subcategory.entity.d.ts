@@ -1,6 +1,5 @@
-import { Category } from "src/AllEntites";
-import { SoftDelete } from "src/AllEntites/HelperEntites/SoftDelete.entites";
-import { AllPhone } from "src/all-phones/entities/all-phone.entity";
+import { SoftDelete } from '../../AllEntites/HelperEntites/SoftDelete.entites';
+import { AllPhone, Category } from '../../AllEntites';
 export declare class SubCategory extends SoftDelete {
     id: number;
     name: string;

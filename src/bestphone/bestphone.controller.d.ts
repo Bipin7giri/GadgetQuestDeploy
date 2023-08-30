@@ -3,7 +3,7 @@ import { BestphoneService } from './bestphone.service';
 import { CreateBestphoneDto } from './dto/create-bestphone.dto';
 import { UpdateBestphoneDto } from './dto/update-bestphone.dto';
 import { PaginateQuery } from 'nestjs-paginate';
-import { ImageUploadSerive } from 'src/helper/imageupload.service';
+import { ImageUploadSerive } from '../helper/imageupload.service';
 export declare class BestphoneController {
     private readonly bestphoneService;
     private imageUploadService;

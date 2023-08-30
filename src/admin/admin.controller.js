@@ -14,17 +14,17 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AdminController = void 0;
 const common_1 = require("@nestjs/common");
-const admin_service_1 = require("./admin.service");
-const create_admin_dto_1 = require("./dto/create-admin.dto");
-const update_admin_dto_1 = require("./dto/update-admin.dto");
+const swagger_1 = require("@nestjs/swagger");
+const create_user_dto_1 = require("../users/dto/create-user.dto");
 const passport_1 = require("@nestjs/passport");
 const auth_service_1 = require("../auth/auth.service");
-const roles_enum_1 = require("../constants/roles.enum");
-const create_user_dto_1 = require("../users/dto/create-user.dto");
-const swagger_1 = require("@nestjs/swagger");
-const nestjs_paginate_1 = require("nestjs-paginate");
 const has_roles_decorator_1 = require("../auth/has-roles.decorator");
 const roles_guard_1 = require("../auth/roles.guard");
+const roles_enum_1 = require("../constants/roles.enum");
+const nestjs_paginate_1 = require("nestjs-paginate");
+const admin_service_1 = require("./admin.service");
+const update_admin_dto_1 = require("./dto/update-admin.dto");
+const create_admin_dto_1 = require("./dto/create-admin.dto");
 let AdminController = class AdminController {
     constructor(adminService, authService) {
         this.adminService = adminService;
@@ -36,8 +36,7 @@ let AdminController = class AdminController {
     async loginSuperAdmin(req, loginDto) {
         const result = await this.authService.login(req.user);
         if (result.roleId.name === roles_enum_1.Role.ADMIN) {
-            const access_token = { access_token: result.access_token };
-            return access_token;
+            return { access_token: result.access_token };
         }
         else {
             throw new common_1.UnauthorizedException('Sorry Unauthorized ');

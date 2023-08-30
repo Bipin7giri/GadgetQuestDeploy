@@ -30,7 +30,13 @@ let AllPhonesService = class AllPhonesService {
             sortableColumns: ['id', 'announced', 'build', 'metadata.camera', 'metadata.camera', 'metadata.gpu'],
             nullSort: 'last',
             searchableColumns: [
-                'metadata.camera', 'metadata.camera', 'metadata.gpu', 'prices.amount', 'metadata.os', 'metadata.colors', 'storage.ram'
+                'metadata.camera',
+                'metadata.camera',
+                'metadata.gpu',
+                'prices.amount',
+                'metadata.os',
+                'metadata.colors',
+                'storage.ram',
             ],
             relations: {
                 metadata: true,
@@ -44,7 +50,10 @@ let AllPhonesService = class AllPhonesService {
         });
     }
     findOne(id) {
-        return this.allPhoneRepository.findOne({ where: { id: id }, relations: { prices: true, storage: true, metadata: true } });
+        return this.allPhoneRepository.findOne({
+            where: { id: id },
+            relations: { prices: true, storage: true, metadata: true },
+        });
     }
     update(id, updateAllPhoneDto) {
         return `This action updates a #${id} allPhone`;

@@ -81,10 +81,10 @@ __decorate([
 ], BestPhone.prototype, "cloudinaryUrl", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => bestphonecategory_entity_1.BestPhoneCategory, (bestPhoneCategory) => bestPhoneCategory.bestPhoneId, {
-        onDelete: "CASCADE",
-        onUpdate: "CASCADE",
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     }),
-    (0, typeorm_1.JoinColumn)({ name: "best_phone_category_id" }),
+    (0, typeorm_1.JoinColumn)({ name: 'best_phone_category_id' }),
     __metadata("design:type", bestphonecategory_entity_1.BestPhoneCategory)
 ], BestPhone.prototype, "bestPhoneCategoryId", void 0);
 BestPhone = __decorate([

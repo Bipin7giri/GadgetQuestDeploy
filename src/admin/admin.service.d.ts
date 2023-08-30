@@ -1,8 +1,8 @@
 import { CreateAdminDto } from './dto/create-admin.dto';
 import { UpdateAdminDto } from './dto/update-admin.dto';
-import { Role, User, UserCredential } from 'src/AllEntites';
+import { Role, User, UserCredential } from '../AllEntites';
 import { Repository } from 'typeorm';
-import { HashService } from 'src/helper/hash.services';
+import { HashService } from '../helper/hash.services';
 import { PaginateQuery, Paginated } from 'nestjs-paginate';
 export declare class AdminService {
     private readonly userRepository;

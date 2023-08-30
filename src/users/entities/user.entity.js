@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const typeorm_1 = require("typeorm");
 const swagger_1 = require("@nestjs/swagger");
-const AllEntites_1 = require("../../AllEntites");
+const index_1 = require("../../AllEntites/index");
 const SoftDelete_entites_1 = require("../../AllEntites/HelperEntites/SoftDelete.entites");
-const UserCredential_entities_1 = require("./UserCredential.entities");
+const AllEntites_1 = require("../../AllEntites");
 const Users_enum_1 = require("../../helper/enums/Users.enum");
 let User = class User extends SoftDelete_entites_1.SoftDelete {
 };
@@ -68,14 +68,14 @@ __decorate([
     __metadata("design:type", Boolean)
 ], User.prototype, "isBlocked", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => AllEntites_1.Role, (role) => role.userId),
+    (0, typeorm_1.ManyToOne)(() => index_1.Role, (role) => role.userId),
     (0, typeorm_1.JoinColumn)({ name: 'role_id' }),
-    __metadata("design:type", AllEntites_1.Role)
+    __metadata("design:type", index_1.Role)
 ], User.prototype, "roleId", void 0);
 __decorate([
-    (0, typeorm_1.OneToOne)(() => UserCredential_entities_1.UserCredential, (uc) => uc.userId),
+    (0, typeorm_1.OneToOne)(() => AllEntites_1.UserCredential, (uc) => uc.userId),
     (0, typeorm_1.JoinColumn)({ name: 'user_credential_id' }),
-    __metadata("design:type", UserCredential_entities_1.UserCredential)
+    __metadata("design:type", AllEntites_1.UserCredential)
 ], User.prototype, "userCredentialId", void 0);
 User = __decorate([
     (0, typeorm_1.Entity)()

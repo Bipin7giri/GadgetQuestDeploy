@@ -1,4 +1,4 @@
-import { Gender } from 'src/helper/enums/Users.enum';
+import { Gender } from '../../helper/enums/Users.enum';
 export declare class RegisterDto {
     email: string;
     password: string;

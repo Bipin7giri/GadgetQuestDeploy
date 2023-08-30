@@ -1,5 +1,5 @@
-import { SoftDelete } from "src/AllEntites/HelperEntites/SoftDelete.entites";
-import { BestPhoneCategory } from "src/bestphonecategory/entities/bestphonecategory.entity";
+import { SoftDelete } from '../../AllEntites/HelperEntites/SoftDelete.entites';
+import { BestPhoneCategory } from '../../bestphonecategory/entities/bestphonecategory.entity';
 export declare class BestPhone extends SoftDelete {
     id: number;
     key: string;

@@ -1,4 +1,4 @@
-import { SoftDelete } from "src/AllEntites/HelperEntites/SoftDelete.entites";
+import { SoftDelete } from '../../AllEntites/HelperEntites/SoftDelete.entites';
 import { AllPhone } from "./all-phone.entity";
 export declare class ProductMetadata extends SoftDelete {
     id: number;

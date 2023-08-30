@@ -14,6 +14,7 @@ const bestphone_entity_1 = require("./entities/bestphone.entity");
 const typeorm_1 = require("@nestjs/typeorm");
 const platform_express_1 = require("@nestjs/platform-express");
 const imageupload_service_1 = require("../helper/imageupload.service");
+const multer_1 = require("multer");
 let BestphoneModule = class BestphoneModule {
 };
 BestphoneModule = __decorate([

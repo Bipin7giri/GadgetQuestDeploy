@@ -11,9 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SubCategory = void 0;
 const typeorm_1 = require("typeorm");
-const AllEntites_1 = require("../../AllEntites");
 const SoftDelete_entites_1 = require("../../AllEntites/HelperEntites/SoftDelete.entites");
-const all_phone_entity_1 = require("../../all-phones/entities/all-phone.entity");
+const AllEntites_1 = require("../../AllEntites");
 let SubCategory = class SubCategory extends SoftDelete_entites_1.SoftDelete {
 };
 __decorate([
@@ -30,13 +29,13 @@ __decorate([
 ], SubCategory.prototype, "description", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => AllEntites_1.Category, (category) => category.subcategories, {
-        onDelete: "CASCADE",
-        onUpdate: "CASCADE",
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
     }),
     __metadata("design:type", AllEntites_1.Category)
 ], SubCategory.prototype, "category", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => all_phone_entity_1.AllPhone, (phone) => phone.subCategory),
+    (0, typeorm_1.OneToMany)(() => AllEntites_1.AllPhone, (phone) => phone.subCategory),
     __metadata("design:type", Array)
 ], SubCategory.prototype, "products", void 0);
 SubCategory = __decorate([

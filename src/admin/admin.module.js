@@ -7,25 +7,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AdminModule = void 0;
-const common_1 = require("@nestjs/common");
-const admin_service_1 = require("./admin.service");
-const admin_controller_1 = require("./admin.controller");
-const typeorm_1 = require("@nestjs/typeorm");
-const AllEntites_1 = require("../AllEntites");
-const platform_express_1 = require("@nestjs/platform-express");
-const users_service_1 = require("../users/users.service");
-const hash_services_1 = require("../helper/hash.services");
-const auth_service_1 = require("../auth/auth.service");
 const jwt_1 = require("@nestjs/jwt");
+const platform_express_1 = require("@nestjs/platform-express");
+const hash_services_1 = require("../helper/hash.services");
+const imageupload_service_1 = require("../helper/imageupload.service");
+const auth_service_1 = require("../auth/auth.service");
 const local_strategy_1 = require("../auth/local.strategy");
 const jwt_strategy_1 = require("../auth/jwt.strategy");
-const imageupload_service_1 = require("../helper/imageupload.service");
+const common_1 = require("@nestjs/common");
+const typeorm_1 = require("@nestjs/typeorm");
+const index_1 = require("../AllEntites/index");
+const admin_controller_1 = require("./admin.controller");
+const admin_service_1 = require("./admin.service");
+const users_service_1 = require("../users/users.service");
+const multer_1 = require("multer");
 let AdminModule = class AdminModule {
 };
 AdminModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([AllEntites_1.User, AllEntites_1.Role, AllEntites_1.UserCredential]),
+            typeorm_1.TypeOrmModule.forFeature([index_1.User, index_1.Role, index_1.UserCredential]),
             platform_express_1.MulterModule.register({
                 dest: './files',
             }),

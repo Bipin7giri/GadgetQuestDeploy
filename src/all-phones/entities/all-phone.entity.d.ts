@@ -1,7 +1,7 @@
 import { Storage } from "./storage.entity";
 import { Price } from "./price.entity";
-import { SoftDelete } from "src/AllEntites/HelperEntites/SoftDelete.entites";
-import { SubCategory } from "src/AllEntites";
+import { SoftDelete } from '../../AllEntites/HelperEntites/SoftDelete.entites';
+import { SubCategory } from "../../subcategory/entities/subcategory.entity";
 import { ProductMetadata } from "./productMetaData";
 export declare class AllPhone extends SoftDelete {
     id: number;

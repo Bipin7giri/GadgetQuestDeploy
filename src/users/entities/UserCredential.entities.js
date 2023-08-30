@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserCredential = void 0;
-const AllEntites_1 = require("../../AllEntites");
 const SoftDelete_entites_1 = require("../../AllEntites/HelperEntites/SoftDelete.entites");
+const AllEntites_1 = require("../../AllEntites");
 const typeorm_1 = require("typeorm");
 let UserCredential = class UserCredential extends SoftDelete_entites_1.SoftDelete {
 };

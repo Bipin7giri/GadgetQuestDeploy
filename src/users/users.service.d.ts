@@ -1,7 +1,7 @@
-import { User, Role } from 'src/AllEntites';
+import { User, Role } from '../AllEntites';
 import { Repository } from 'typeorm';
-import { CreateUserDto } from 'src/users/dto/create-user.dto';
-import { HashService } from 'src/helper/hash.services';
+import { CreateUserDto } from '../users/dto/create-user.dto';
+import { HashService } from '../helper/hash.services';
 import { PaginateQuery, Paginated } from 'nestjs-paginate';
 import { UserCredential } from './entities/UserCredential.entities';
 import { UpdateUserDto } from './dto/update-user.dto';

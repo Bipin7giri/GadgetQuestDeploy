@@ -1,5 +1,5 @@
-import { User } from 'src/AllEntites';
-import { SoftDelete } from 'src/AllEntites/HelperEntites/SoftDelete.entites';
+import { SoftDelete } from '../../AllEntites/HelperEntites/SoftDelete.entites';
+import { User } from '../../AllEntites';
 export declare class UserCredential extends SoftDelete {
     id: number;
     password: string;

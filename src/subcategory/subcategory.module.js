@@ -11,16 +11,13 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const subcategory_service_1 = require("./subcategory.service");
 const subcategory_controller_1 = require("./subcategory.controller");
-const subcategory_entity_1 = require("./entities/subcategory.entity");
-const category_service_1 = require("../category/category.service");
 const AllEntites_1 = require("../AllEntites");
+const category_service_1 = require("../category/category.service");
 let SubcategoryModule = class SubcategoryModule {
 };
 SubcategoryModule = __decorate([
     (0, common_1.Module)({
-        imports: [
-            typeorm_1.TypeOrmModule.forFeature([subcategory_entity_1.SubCategory, AllEntites_1.Category]),
-        ],
+        imports: [typeorm_1.TypeOrmModule.forFeature([AllEntites_1.SubCategory, AllEntites_1.Category])],
         controllers: [subcategory_controller_1.SubcategoryController],
         providers: [subcategory_service_1.SubcategoryService, category_service_1.CategoryService],
     })

@@ -1,5 +1,5 @@
-import { User } from 'src/AllEntites';
-import { SoftDelete } from 'src/AllEntites/HelperEntites/SoftDelete.entites';
+import { User } from '../../AllEntites/index';
+import { SoftDelete } from '../../AllEntites/HelperEntites/SoftDelete.entites';
 export declare class Role extends SoftDelete {
     static Admin(Admin: any): void;
     id: number;

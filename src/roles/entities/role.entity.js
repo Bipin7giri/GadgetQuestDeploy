@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Role = void 0;
-const AllEntites_1 = require("../../AllEntites");
+const index_1 = require("../../AllEntites/index");
 const SoftDelete_entites_1 = require("../../AllEntites/HelperEntites/SoftDelete.entites");
 const typeorm_1 = require("typeorm");
 let Role = class Role extends SoftDelete_entites_1.SoftDelete {
@@ -34,7 +34,7 @@ __decorate([
     __metadata("design:type", Array)
 ], Role.prototype, "roles", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => AllEntites_1.User, (user) => user.roleId),
+    (0, typeorm_1.OneToMany)(() => index_1.User, (user) => user.roleId),
     __metadata("design:type", Array)
 ], Role.prototype, "userId", void 0);
 Role = __decorate([

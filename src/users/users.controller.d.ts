@@ -1,9 +1,9 @@
 /// <reference types="multer" />
-import { AdminAuto, CreateUserDto, LoginDto } from 'src/users/dto/create-user.dto';
-import { UsersService } from 'src/users/users.service';
-import { AuthService } from 'src/auth/auth.service';
+import { AdminAuto, CreateUserDto, LoginDto } from '../users/dto/create-user.dto';
+import { UsersService } from '../users/users.service';
+import { AuthService } from '../auth/auth.service';
 import { PaginateQuery } from 'nestjs-paginate';
-import { ImageUploadSerive } from 'src/helper/imageupload.service';
+import { ImageUploadSerive } from '../helper/imageupload.service';
 import { UpdateUserDto } from './dto/update-user.dto';
 export declare class UsersController {
     private readonly userService;

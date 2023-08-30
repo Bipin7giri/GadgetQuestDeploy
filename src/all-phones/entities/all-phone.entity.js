@@ -14,7 +14,7 @@ const typeorm_1 = require("typeorm");
 const storage_entity_1 = require("./storage.entity");
 const price_entity_1 = require("./price.entity");
 const SoftDelete_entites_1 = require("../../AllEntites/HelperEntites/SoftDelete.entites");
-const AllEntites_1 = require("../../AllEntites");
+const subcategory_entity_1 = require("../../subcategory/entities/subcategory.entity");
 const productMetaData_1 = require("./productMetaData");
 let AllPhone = class AllPhone extends SoftDelete_entites_1.SoftDelete {
 };
@@ -143,11 +143,11 @@ __decorate([
     __metadata("design:type", String)
 ], AllPhone.prototype, "price", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => AllEntites_1.SubCategory, (subCategory) => subCategory.products, {
+    (0, typeorm_1.ManyToOne)(() => subcategory_entity_1.SubCategory, (subCategory) => subCategory.products, {
         onDelete: "CASCADE",
         onUpdate: "CASCADE",
     }),
-    __metadata("design:type", AllEntites_1.SubCategory)
+    __metadata("design:type", subcategory_entity_1.SubCategory)
 ], AllPhone.prototype, "subCategory", void 0);
 __decorate([
     (0, typeorm_1.OneToMany)(() => productMetaData_1.ProductMetadata, (metadata) => metadata.phone, {
